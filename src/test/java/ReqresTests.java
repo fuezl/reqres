@@ -7,6 +7,7 @@ import io.restassured.filter.log.LogDetail;
 import io.restassured.path.json.JsonPath;
 import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.util.Locale;
@@ -26,6 +27,7 @@ public class ReqresTests extends ApiTestBase {
 
 
     @Test
+    @Tag("api")
     @DisplayName("Создание пользователя")
     void createUserTest() {
 
@@ -47,6 +49,7 @@ public class ReqresTests extends ApiTestBase {
     }
 
     @Test
+    @Tag("api")
     @DisplayName("Регистрация пользователя")
     void registrationTest() {
 
@@ -67,6 +70,7 @@ public class ReqresTests extends ApiTestBase {
     }
 
     @Test
+    @Tag("api")
     @DisplayName("Регистрация пользователя - негативный тест")
     void registrationUnsuccessfulTest() {
 
@@ -87,6 +91,7 @@ public class ReqresTests extends ApiTestBase {
     }
 
     @Test
+    @Tag("api")
     @DisplayName("Получение информации по пользователю")
     void getSingleUserTest() {
 
@@ -106,6 +111,7 @@ public class ReqresTests extends ApiTestBase {
     }
 
     @Test
+    @Tag("api")
     @DisplayName("Авторизация")
     void loginTest() {
 
